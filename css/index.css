@@ -1,0 +1,364 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    color: #ccc;
+    font-weight:lighter;
+}
+input,select,option,textarea{outline: none;}
+body{
+    /* background-color: #ccc; */
+    background-image: url(../imgs/222.jpg);
+    user-select: none;
+}
+a{
+    text-decoration: none;
+    color: #999;
+    font-size: 13px;
+    font-weight:lighter;
+}
+a:hover{
+    text-decoration: none;
+    color: #444;
+}
+
+
+@keyframes aaa {
+    0%{
+        transform: scale(0,0);
+    }
+    70%{
+        transform: scale(1,1);
+    }
+    85%{
+        transform: scale(1.2,1.2);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+}
+
+@keyframes bbb {
+    0%{
+        transform: scale(1,1);
+    }
+    15%{
+        transform: scale(1.2,1.2);
+    }
+    30%{
+         transform: scale(1,1);
+     }
+    100%{
+          transform: scale(0,0);
+      }
+}
+
+@keyframes ccc {
+    0%{
+        transform: scale(1,1);
+    }
+    /*40%{*/
+    /*    transform: scale(0.5,0.5);*/
+    /*}*/
+    /*70%{*/
+    /*    transform: scale(0.5,0.5);*/
+    /*}*/
+    100%{
+        transform: scale(0,0);
+    }
+}
+
+.login{
+    width: 430px;
+    height: 330px;
+    margin: 100px auto;
+    border-radius: 5px;
+    display: flex;
+    background: -webkit-linear-gradient(top,rgb(163,100,254) 10%,rgb(50,100,255) 38%,white 38%);
+    box-shadow: 0 0 10px #999;
+}
+.login_active{
+    animation: aaa 0.5s linear;
+    animation-fill-mode : backwards;
+}
+.login_active1{
+    animation: bbb 0.5s linear;
+    animation-fill-mode : forwards;
+}
+.login_active2{
+    animation: ccc 0.5s linear;
+    animation-fill-mode : forwards;
+}
+/*.login:hover{*/
+/*    !*animation: aaa 1s linear;*!*/
+/*    !*transform: rotateY(360deg);*!*/
+/*}*/
+
+
+/*左边*/
+.left{
+    width: 22%;
+    height: 100%;
+    position: relative;
+}
+.left span{
+    display: block;
+    width: 50px;
+    height: 42px;
+    background: url("../imgs/player_logo.png") no-repeat;
+    background-size: 100%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.left a{
+    display: block;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+/*中间*/
+
+.content{
+    width: 56%;
+    height: 100%;
+    position: relative;
+}
+.content .user{
+    margin: 90px  auto;
+    width: 70px;
+    height: 70px;
+    border: 2px solid rgb(151,210,250);
+    border-radius: 50%;
+    background: url("../imgs/dehua.jpg") no-repeat;
+    background-size: 100%;
+    position: relative;
+}
+.content .user:before{
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    background-color: rgb(100,241,117);
+    border: 2px solid white;
+    border-radius: 50%;
+    top: 47px;
+    left: 50px;
+}
+.content .user:hover:before{
+    background-color: rgb(0,241,117);
+}
+.content .from{
+    position: absolute;
+    left: 7%;
+    top: 165px;
+}
+.content .from .from_text{
+    position: relative;
+}
+.content .from .from_text i{
+    position: absolute;
+}
+.content .from .from_text #user_icon{
+    width: 20px;
+    height: 20px;
+    left: -12px;
+    top: 15px;
+}
+.inputclass{
+    color: rgb(50,100,255);
+}
+.inputclass1{
+    color: rgb(50,100,255);
+}
+
+.content .from .from_text #user_list{
+    width: 20px;
+    height: 20px;
+    left: 204px;
+    top: 15px;
+}
+.content .from .from_text #user_list:hover{
+    color: #888;
+}
+
+.content .from .from_password{
+    position: relative;
+}
+.content .from .from_password i{
+    position: absolute;
+}
+.content .from .from_password #pw_lock{
+    width: 20px;
+    height: 20px;
+    left: -12px;
+    top: 15px;
+}
+.content .from .from_password #pw_key{
+    width: 20px;
+    height: 20px;
+    left: 204px;
+    top: 15px;
+    cursor: pointer;
+}
+.content .from .from_password #pw_key:hover{
+    color: #888;
+}
+
+.content .from input[name]{
+    display: inline-block;
+    width: 236px;
+    height: 36px;
+    border: 0;
+    border-bottom: 0.8px solid #ccc;
+    /*color: black;*/
+    margin-left: -13px;
+    outline: none;
+    padding-left: 20px;
+    padding-top: 10px;
+    font-weight:lighter;
+}
+.content .from input[name]::placeholder{
+    color: #777;
+    font-weight:lighter;
+    font-size: 13px;
+}
+.content .from input[name=password]{
+    margin-bottom: 5px;
+}
+.content .from .input{
+    margin-left: -14px;
+}
+.content .from .input li{
+    display: inline-block;
+    margin-right: 23px;
+    color: #999;
+}
+.content .from .input li:nth-child(3) {
+    margin-right: 0;
+}
+.content .from .input li i{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #ccc;
+    font-size: 10px;
+    line-height: 14px;
+    color: rgb(8,189,252);
+    -webkit-text-stroke: 1px white;
+}
+.content .from .input li span{
+    font-weight:lighter;
+    font-size: 12px;
+}
+
+.content .from input[type=submit]{
+    width: 238px;
+    height: 36px;
+    background: rgb(31,200,253);
+    outline: none;
+    margin-left: -15px;
+}
+
+/*右边*/
+
+.right{
+    width: 22%;
+    height: 100%;
+}
+.right .nav_1{
+    text-align: right;
+    margin-top: -1px;
+}
+.right .nav_1 span{
+    width: 31px;
+    height: 30px;
+    /*border: 1px solid black;*/
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+    -webkit-transition: background-color 0.5s;
+    -webkit-text-stroke: 1px gray;
+}
+.right .nav_1 span:nth-child(1){
+    margin-right: -5px;
+ }
+.right .nav_1 span:nth-child(2){
+    margin-right: -5px;
+}
+.right .nav_1 span:hover{
+    background-color: #d7c6fc;
+    opacity: 0.8;
+}
+.right .nav_1 span:nth-child(3):hover{
+    background-color: indianred;
+}
+.right .code1{
+    width: 40px;
+    height: 40px;
+    /*border: 1px solid black;*/
+    text-align: center;
+    line-height: 40px;
+    font-size: 21px;
+    margin-top: 253px;
+    margin-left: 51px;
+    -webkit-transition: color 1s;
+}
+.right .code1:hover{
+    color: #999;
+}
+
+/*按钮*/
+
+.show_login{
+    position: fixed;
+    bottom: 0;
+    right: 54px;
+}
+.hide_login{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+.hide_login input{
+    outline: none;
+}
+
+/*底部任务栏*/
+
+.footer_1{
+    width: 500px;
+    height: 30px;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    left: 400px;
+}
+.footer_1 .footer_1_list{
+    display: inline-block;
+}
+.footer_1 .footer_1_list li{
+    width: 100px;
+    height: 30px;
+    display: inline-block;
+    font-size: 12px;
+    text-align: center;
+    line-height: 30px;
+    border-bottom: 3px solid lightskyblue;
+}
+.footer_1 .footer_1_list li:hover{
+    background-color: rgba(204,204,204,.5);
+}
+.footer_1 .userImg{
+    float: right;
+    margin-right: 24px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: #31b0d5;
+}
+.footer_1 .userImg:hover{
+    background-color: rgba(204,204,204,.5);
+}

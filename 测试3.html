@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .icontent{
+            width: 90%;
+            height: 100%;
+            margin: 0 5% 0 5%;
+            overflow: hidden;
+        }
+        .logincontent{
+            width: 90%;
+            height: 100%;
+            margin: 50px 5% 0 5%;
+            overflow: hidden;
+            text-align: center;
+        }
+        .logincontent input{
+            width: 100%;
+            height: 35px;
+            padding: 3px;
+            margin-top: 20px;
+            /* 这里是去除掉input的默认样式然后修改为自己的 */
+            background:none;
+            outline:none;
+            border:0px;
+            /* 这里是修改为自己的样式 */
+            border-bottom: 2px solid #dcdcdc;
+            border-bottom-left-radius: 1px;
+            border-bottom-right-radius: 1px;
+            /* 使用怪异盒模型，也可以不使用 */
+            box-sizing: border-box;
+        }
+        /* 这里是设置input获得焦点时的变化 */
+        .logincontent input:focus{
+            border-bottom: 2px solid #0F996B;
+            border-bottom-left-radius: 1px;
+            border-bottom-right-radius: 1px;
+        }
+        /* 为登录div设置样式 */
+        .loginb{
+            margin-top: 20px;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            background-color: rgb(7, 187, 127);
+            border-radius: 5px;
+            font-size: 18px;
+            color: #ffffff;
+        }
+        /* 设置登录div被点击时改变一下背景色 */
+        .loginb:active{
+            background-color: #0F996B;
+        }
+    </style>
+</head>
+<body>
+<div class="icontent">
+    <div class="logincontent">
+        <h3>师生互动-登录</h3>
+        <input type="text" v-model="username" placeholder="请输入手机号或邮箱">
+        <input type="password" v-model="password" placeholder="请输入密码">
+        <div class="loginb" @click="loginb($event)">Login 登录</div>
+    </div>
+</div>
+
+<script>
+    export default {
+        name: "login",
+        data () {
+            return {
+                username: '17012345678',
+                password: '123456'
+            }
+        },
+        methods: {
+            loginb(e) {
+                // this.$router.push({ name: 'cousermanager', params: { pagenum: pagenum }})
+                // this.$router.push({ name: 'groupwork'})
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
